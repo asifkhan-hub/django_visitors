@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Saving Form</title>
+<!--  <link rel="stylesheet" type="text/css" href="styles.css">-->
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+  <h1>Password Saving Form</h1>
+   <form method="POST" action="" class="row g-3 needs-validation" novalidate>
+                    {%csrf_token%}
+    <label for="Passwordname">Password Name:</label>
+    <input type="text" id="Passwordname" name="Passwordname" required>
+
+    <label for="Password">Password:</label>
+    <input type="Password" id="Password" name="Password" required>
+
+    <input type="submit" value="Save Password">
+  </form>
+</body>
+</html>

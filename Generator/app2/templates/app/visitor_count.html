@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% for visitor in visitors %}
+    <p>Visitor IP: {{ visitor.ip_address }}</p>
+    <p>Visited Page: {{ visitor.visited_page }}</p>
+    <hr>
+{% empty %}
+    <p>No visitors found.</p>
+{% endfor %}
+
+<body>
+
+</body>
+</html>
